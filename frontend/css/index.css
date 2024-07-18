@@ -1,44 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 20px;
 }
 
 .container {
-    text-align: center;
-    margin-top: 50px;
-    display:flex;
-}
-
-#code {
-    width: 80%;
-    height: 200px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-#time{
-height:1%;
-width: 15%;
-height: 50px;
-padding: 10px;
-    margin-bottom: 20px;
-}
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    margin: 10px;
-    height:5%;
-}
-.AuthIn{
-padding 10px;}
-.output-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-#output {
-    background-color: #f8f9fa;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.user-info {
+    width: 100%;
+    max-width: 25%;
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.post-history {
+    width: 100%;
+    max-width: 25%;
+    background-color: #f1f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #007BFF;
+}
+
+textarea, input[type="number"] {
+    width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f9f9f9;
+    margin-bottom: 50px; /* Увеличен отступ */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-left: 30px;
+}
+
+li:before {
+    content: '→';
+    color: #007BFF;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .user-info, .main-content, .post-history {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .user-info, .post-history {
+        margin-bottom: 20px;
+    }
 }

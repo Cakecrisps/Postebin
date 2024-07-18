@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pastebin Clone</title>
-<link rel="stylesheet" href="../css/index.css">
-    <script src="../js/createpost.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная Страница</title>
+    <link rel="stylesheet" href="../css/index.css">
 </head>
-
 <body>
     <div class="container">
-        <textarea id="code" placeholder="Paste your code here"></textarea>
-        <input id="time" placeholder="Life time in minutes/0 for burn after read"></input>
-        <button id="createPostBtn" onclick="createPost()">Создать пост</button>
-
-        <div class = "Auth">
-            <label>Логин/Пароль</label>
-            <div class = "AuthIn"><input type="text" id="Login" name="myInputField">
-        <input type="text" id="Password" name="myInputField"></div>
+        <div class="user-info">
+            <h2>Информация о пользователе</h2>
+            <p>Имя: Иван Иванов</p>
+            <p>Электронная почта: ivan@example.com</p>
         </div>
-
+        <div class="main-content">
+            <h1>Создать пост</h1>
+            <form id="post-form">
+                <div class="input-group">
+                    <label for="post-content">Содержание поста</label>
+                    <textarea id="post-content" name="post-content" rows="10" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="post-lifetime">Время жизни поста (в минутах)</label>
+                    <input type="number" id="post-lifetime" name="post-lifetime" required>
+                </div>
+                <button type="submit">Запостить</button>
+            </form>
+        </div>
+        <div class="post-history">
+            <h2>История постов</h2>
+            <ul id="posts-list">
+                <li>Содержание: Это пример поста 1 | Время жизни: 60 минут</li>
+                <li>Содержание: Это пример поста 2 | Время жизни: 120 минут</li>
+                <li>Содержание: Это пример поста 3 | Время жизни: 30 минут</li>
+            </ul>
+        </div>
     </div>
-
-    <div class="output-container">
-        <h2>Your Paste:</h2>
-        <div id="output"></div>
-    </div>
-
+    <script src="../js/main.js"></script>
 </body>
 </html>
