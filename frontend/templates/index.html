@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pastebin Clone</title>
+<link rel="stylesheet" href="../css/index.css">
+    <script src="../js/createpost.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <textarea id="code" placeholder="Paste your code here"></textarea>
+        <input id="time" placeholder="Life time in minutes/0 for burn after read"></input>
+        <button id="createPostBtn" onclick="createPost()">Создать пост</button>
+
+        <div class = "Auth">
+            <label>Логин/Пароль</label>
+            <div class = "AuthIn"><input type="text" id="Login" name="myInputField">
+        <input type="text" id="Password" name="myInputField"></div>
+        </div>
+
+    </div>
+
+    <div class="output-container">
+        <h2>Your Paste:</h2>
+        <div id="output"></div>
+    </div>
+
+</body>
+</html>
