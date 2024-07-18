@@ -12,3 +12,4 @@ async def get_veiws_from_db(post_id : str):
     async with aiohttp.ClientSession() as session:
         async with session.post(url = 'https://127.0.0.1:5050/db/getveiws',data={"post_id":post_id}) as response:
             ...
+#git push -u https://github.com/Cakecrisps/Postebin.git master
